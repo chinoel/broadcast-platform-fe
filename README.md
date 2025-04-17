@@ -1,36 +1,22 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 방송 플랫폼 제작기
+### 목표 : WebRTC 기반 그리드 통신 구현
+### 서버 구성
+    - Front : Next.js
+    - Back : Phoenix Framework
 
-## Getting Started
+### WebRTC
+- 플러그인 없이 실시간으로 동영상, 오디오, 데이터를 주고받는 개방형 표준
+  - WebRTC 프로젝트 기본 원칙은 API가 오픈소스, 무료, 표준화
+  - 웹브라우저에 내장, 기존 기술보다 효율적
 
-First, run the development server:
+### 스트리밍 데이터 획득 및 통신 API
+- MediaStream : 사용자의 카메라 및 마이크 같은 데이터 스트림 액세스
+- RTCPeerConnection : 암호화 및 대역폭 관리 기능을 갖춘 오디오 또는 영상 통화 사용 설정
+- RTCDataChannel : 일반 데이터의 P2P 통신을 사용 설정
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### 동작 원리
+1. 각 브라우저 P2P 커뮤니케이션
+2. 서로위 주소 공유
+3. 보안 사항 및 방화벽 우회
+4. 실시간 데이터 공유
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
